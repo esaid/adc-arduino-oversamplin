@@ -14,3 +14,18 @@ il faut faire la somme des 4096 echantillons et la diviser par 2^6 = 64.
 analogRead() max possible est alors  4096*1023/64 = 65472. 
 pour Vref = 3.3v ,    q= 3.3 / 2^16  , en python >>> 3.3 / (2**16) 
 q = 0.05035 mV
+
+Attention , le temps pour une mesure augmente de maniere exponentielle en fonction du nombre de  bits .
+pour l'arduino yun , le convertisseur ADC de 10 bits de precision necessite une temps de 13us
+Tone = (1 / 16MHz) * 16 * 13 = 13us  (pour ADC  10 bits)
+
+Tall = (1 / 16Mhz) * 16 * 4^n * 13
+
+Bit 	n 	Samples 	Time
+11 	  1 	    4 	    52us
+12 	  2 	   16 	   208us
+13 	  3 	   64 	   832us
+14 	  4 	  256 	 3.328ms
+15 	  5 	 1024 	13.312ms
+16 	  6 	 4096 	53.248ms
+
