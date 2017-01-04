@@ -19,14 +19,14 @@ Attention , le temps pour une mesure augmente de maniere exponentielle en foncti
 pour l'arduino yun , le convertisseur ADC de 10 bits de precision necessite une temps de 13us
 Tone = (1 / 16MHz) * 16 * 13 = 13us  (pour ADC  10 bits)
 
-Tall = (1 / 16Mhz) * 16 * 4^n * 13
+# Tall = (1 / 16Mhz) * 16 * 4^n * 13
 
-Bit 	n 	Samples 	Time
-11 	  1 	    4 	    52us
-12 	  2 	   16 	   208us
-13 	  3 	   64 	   832us
-14 	  4 	  256 	 3.328ms
-15 	  5 	 1024 	13.312ms
-16 	  6 	 4096 	53.248ms
+# Bit 	n 	Samples 	Time
+# 11 	  1 	    4 	    52us
+# 12 	  2 	   16 	   208us
+# 13 	  3 	   64 	   832us
+# 14 	  4 	  256 	 3.328ms
+# 15 	  5 	 1024 	13.312ms
+# 16 	  6 	 4096 	53.248ms
 
 
